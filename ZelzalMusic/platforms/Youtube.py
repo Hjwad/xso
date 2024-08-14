@@ -261,7 +261,7 @@ class YouTubeAPI:
     ):
         if videoid:
             link = self.base + link
-                    if "&" in link:
+        if "&" in link:
             link = link.split("&")[0]
         a = VideosSearch(link, limit=10)
         result = (await a.next()).get("result")
